@@ -1,0 +1,54 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: 1.6.0_24 (Apple Inc.)
+Built-By: hardy
+Build-Jdk: 1.6.0_24
+Implementation-Title: hibernate-validator
+Implementation-URL: http://validator.hibernate.org/hibernate-validator
+Implementation-Vendor: org.hibernate
+Implementation-Vendor-Id: org.hibernate
+Implementation-Version: 4.2.0.Final
+Specification-Title: Bean Validation
+Export-Package: org.hibernate.validator;uses:="javax.validation,javax.
+ validation.spi,org.hibernate.validator.cfg,org.hibernate.validator.re
+ sourceloading";version="4.2.0.Final",org.hibernate.validator.constrai
+ nts;uses:="javax.validation,javax.validation.constraints";version="4.
+ 2.0.Final",org.hibernate.validator.cfg;uses:="javax.validation,org.hi
+ bernate.validator.cfg.context";version="4.2.0.Final",org.hibernate.va
+ lidator.cfg.context;uses:="org.hibernate.validator.cfg";version="4.2.
+ 0.Final",org.hibernate.validator.cfg.defs;uses:="org.hibernate.valida
+ tor.cfg,javax.validation.constraints,org.hibernate.validator.constrai
+ nts";version="4.2.0.Final",org.hibernate.validator.group;version="4.2
+ .0.Final",org.hibernate.validator.messageinterpolation;uses:="javax.v
+ alidation.metadata,javax.validation,org.hibernate.validator.resourcel
+ oading";version="4.2.0.Final",org.hibernate.validator.method;uses:="j
+ avax.validation,org.hibernate.validator.method.metadata";version="4.2
+ .0.Final",org.hibernate.validator.method.metadata;uses:="javax.valida
+ tion.metadata";version="4.2.0.Final",org.hibernate.validator.resource
+ loading;uses:="org.slf4j";version="4.2.0.Final"
+Tool: Bnd-0.0.357
+Bundle-Name: Hibernate Validator
+Bundle-Version: 4.2.0.Final
+Bnd-LastModified: 1308567722129
+Bundle-ManifestVersion: 2
+Bundle-Description: Hibernate's Bean Validation (JSR-303) reference im
+ plementation.
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Import-Package: javax.persistence;resolution:=optional;version="[2.0.0
+ ,3.0.0)",javax.validation;version="[1.0.0,2.0.0)",javax.validation.bo
+ otstrap;version="[1.0.0,2.0.0)",javax.validation.constraints;version=
+ "[1.0.0,2.0.0)",javax.validation.groups;version="[1.0.0,2.0.0)",javax
+ .validation.metadata;version="[1.0.0,2.0.0)",javax.validation.spi;ver
+ sion="[1.0.0,2.0.0)",javax.xml.bind;version=0,javax.xml.bind.annotati
+ on;version=0,javax.xml.bind.annotation.adapters;version=0,javax.xml.n
+ amespace;version=0,javax.xml.transform;version=0,javax.xml.transform.
+ stream;version=0,javax.xml.validation;version=0,org.joda.time;resolut
+ ion:=optional;version="[1.6.0,2.0.0)",org.jsoup;resolution:=optional;
+ version="[1.5.2,2.0.0)",org.jsoup.safety;resolution:=optional;version
+ ="[1.5.2,2.0.0)",org.slf4j;version="[1.5.6,2.0.0)",org.xml.sax;versio
+ n=0
+Bundle-SymbolicName: org.hibernate.validator
+Originally-Created-By: Apache Maven
+Bundle-ClassPath: lib/hibernate-validator-4.2.0.Final.jar,
+ .
+

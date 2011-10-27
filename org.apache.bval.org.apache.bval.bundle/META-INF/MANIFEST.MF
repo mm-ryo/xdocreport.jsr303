@@ -1,0 +1,81 @@
+Manifest-Version: 1.0
+Export-Package: org.apache.bval.constraints;uses:="javax.validation,ja
+ vax.validation.constraints,org.apache.bval.routines",org.apache.bval.
+ util;uses:="org.apache.commons.beanutils,org.apache.bval.model,org.ap
+ ache.bval",org.apache.bval.jsr303.groups;uses:="javax.validation.grou
+ ps,org.apache.commons.lang,javax.validation",org.apache.bval.jsr303.u
+ til;uses:="org.apache.commons.lang,javax.validation,org.apache.common
+ s.beanutils,org.apache.bval.jsr303,org.apache.bval.util",org.apache.b
+ val.model;uses:="org.apache.commons.lang,org.apache.bval.util",org.ap
+ ache.bval.jsr303.resolver;uses:="javax.validation,org.apache.bval.jsr
+ 303.util,org.slf4j,javax.persistence",org.apache.bval.jsr303.extensio
+ ns;uses:="org.apache.bval.jsr303,javax.validation.metadata,org.apache
+ .bval.model,javax.validation,org.apache.bval.util,org.apache.bval.jsr
+ 303.groups,org.apache.bval,org.apache.bval.jsr303.xml,org.apache.comm
+ ons.lang,org.apache.bval.jsr303.util",org.apache.bval;uses:="org.apac
+ he.bval.util,org.apache.bval.model,org.slf4j,org.apache.commons.lang"
+ ,org.apache.bval.routines,org.apache.bval.jsr303.xml;uses:="org.slf4j
+ ,org.apache.bval.jsr303.util,javax.validation,javax.xml.bind.annotati
+ on,javax.xml.bind.annotation.adapters,javax.xml.bind,org.apache.bval.
+ util,javax.xml.namespace,org.apache.commons.beanutils,javax.xml.trans
+ form,javax.xml.transform.stream,javax.xml.validation,org.apache.bval.
+ jsr303,org.xml.sax",org.apache.bval.jsr303;uses:="org.slf4j,org.apach
+ e.bval.jsr303.xml,org.apache.bval.util,org.apache.bval.jsr303.groups,
+ org.apache.bval.jsr303.util,javax.validation,org.apache.bval.xml,org.
+ apache.bval,javax.validation.spi,org.apache.commons.lang,javax.valida
+ tion.bootstrap,org.apache.bval.model,javax.validation.metadata,org.ap
+ ache.bval.jsr303.resolver,javax.validation.groups"
+Implementation-Title: Apache Bean Validation
+Built-By: dwoods
+Tool: Bnd-0.0.357
+SPI-Provider: true
+Specification-Title: JSR-303 Bean Validation
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.apache.bval.org.apache.bval.bundle
+Implementation-Version: 0.3-incubating
+Specification-Vendor: Sun Microsystems, Inc.
+Bundle-Name: Apache Bean Validation :: org.apache.bval.bundle
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 0.3.0.incubating
+Build-Jdk: 1.6.0_22
+Bnd-LastModified: 1296791321284
+Bundle-ManifestVersion: 2
+Bundle-Description: Apache Bean Validation - Aggregate OSGi Bundle (bv
+ al-core + bval-jsr303)
+Bundle-DocURL: http://incubator.apache.org/bval/org.apache.bval.bundle
+Implementation-Build: 1067075
+Import-Package: javax.persistence;resolution:=optional,
+ javax.validation,
+ javax.validation.bootstrap,
+ javax.validation.constraints,
+ javax.validation.groups,
+ javax.validation.metadata,
+ javax.validation.spi,
+ javax.xml.bind,
+ javax.xml.bind.annotation,
+ javax.xml.bind.annotation.adapters,
+ javax.xml.namespace,
+ javax.xml.transform,
+ javax.xml.transform.stream,
+ javax.xml.validation,
+ org.slf4j;version="1.6",
+ org.xml.sax
+Embed-Dependency: *;inline=true
+Specification-Version: 1.0
+Main-Class: org.apache.bval.util.BeanValidationVersion
+Bundle-ClassPath: lib/org.apache.bval.bundle-0.3-incubating.jar,
+ .,
+ lib/asm-all-3.3.1.jar,
+ lib/commons-beanutils-1.8.0.jar,
+ lib/commons-collections-3.2.1.jar,
+ lib/commons-digester-2.0.jar,
+ lib/commons-io-2.0.1.jar,
+ lib/commons-lang-2.5.jar,
+ lib/commons-logging-1.1.1.jar,
+ lib/commons-primitives-1.0.jar,
+ lib/guava-r08.jar,
+ lib/MVEL-fork.jar,
+ lib/nebula-cdatetime.jar,
+ lib/nebula-cwt.jar
+
