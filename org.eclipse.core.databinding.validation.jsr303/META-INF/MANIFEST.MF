@@ -10,10 +10,10 @@ Import-Package: javax.validation,
  org.eclipse.core.databinding.observable;resolution:=optional,
  org.eclipse.core.databinding.observable.value;resolution:=optional,
  org.eclipse.core.databinding.validation,
- org.eclipse.core.runtime,
  org.osgi.framework,
  org.osgi.util.tracker
 Bundle-Activator: org.eclipse.core.databinding.validation.jsr303.internal.Activator
 Export-Package: org.eclipse.core.databinding.validation.jsr303
 Bundle-Vendor: %providerName
 Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.core.runtime
