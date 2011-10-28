@@ -1,6 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Samples
+Bundle-Name: %pluginName
+Bundle-Vendor: %providerName
 Bundle-SymbolicName: org.eclipse.core.databinding.validation.jsr303.samples
 Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.eclipse.core.runtime,

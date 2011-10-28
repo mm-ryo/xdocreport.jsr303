@@ -9,43 +9,21 @@
  *     Angelo Zerr <angelo.zerr@gmail.com> - initial API and implementation
  *     Pascal Leclercq <pascal.leclercq@gmail.com> - Initial API and implementation 
  *******************************************************************************/
-package org.eclipse.core.databinding.validation.jsr303.samples.rcp.model;
+package org.eclipse.core.databinding.validation.jsr303;
 
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.ValidatorFactory;
 
-public class Person {
+/**
+ * JSR-303 {@link ValidatorFactory} provider.
+ * 
+ */
+public interface IValidatorFactoryProvider {
 
-	private long id;
+	/**
+	 * Returns the JSR-303 {@link ValidatorFactory} instance to use to validate.
+	 * 
+	 * @return
+	 */
+	ValidatorFactory getValidatorFactory();
 
-	@Size(min = 1)
-	private String name;
-
-	@Size(min = 1)
-	@Pattern(regexp = ".+@.+\\.[a-z]+")
-	private String email;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
 }

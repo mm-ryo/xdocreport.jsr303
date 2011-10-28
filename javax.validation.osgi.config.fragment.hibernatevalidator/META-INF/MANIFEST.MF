@@ -1,6 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Hibernatevalidator
+Bundle-Name: %pluginName
+Bundle-Vendor: %providerName
 Bundle-SymbolicName: javax.validation.osgi.config.fragment.hibernatevalidator
 Bundle-Version: 1.0.0.qualifier
 Fragment-Host: com.springsource.javax.validation;bundle-version="1.0.0"
