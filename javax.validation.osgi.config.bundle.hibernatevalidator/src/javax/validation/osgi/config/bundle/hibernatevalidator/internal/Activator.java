@@ -1,19 +1,32 @@
+/*******************************************************************************
+ * Copyright (c) 2011 Angelo Zerr and Pascal Leclercq.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:      
+ *     Angelo Zerr <angelo.zerr@gmail.com> - initial API and implementation
+ *     Pascal Leclercq <pascal.leclercq@gmail.com> - Initial API and implementation 
+ *******************************************************************************/
 package javax.validation.osgi.config.bundle.hibernatevalidator.internal;
 
 import javax.validation.Validation;
 import javax.validation.ValidatorFactory;
 import javax.validation.bootstrap.ProviderSpecificBootstrap;
 
-import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.hibernate.validator.HibernateValidator;
 import org.hibernate.validator.HibernateValidatorConfiguration;
+import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 
 /**
- * The activator class controls the plug-in life cycle
+ * The activator class controls the plug-in life cycle. It register an instance
+ * of {@link ValidatorFactory} configured for Hibernate Validator in the OSGi
+ * services registry.
  */
-public class Activator extends AbstractUIPlugin {
+public class Activator implements BundleActivator {
 
 	// The plug-in ID
 	public static final String PLUGIN_ID = "javax.validation.osgi.config.bundle.hibernatevalidator"; //$NON-NLS-1$
@@ -37,7 +50,6 @@ public class Activator extends AbstractUIPlugin {
 	 * )
 	 */
 	public void start(BundleContext context) throws Exception {
-		super.start(context);
 		plugin = this;
 		
 		// configure and build an instance of ValidatorFactory
@@ -70,7 +82,6 @@ public class Activator extends AbstractUIPlugin {
 			serviceRegistration = null;
 		}
 		plugin = null;
-		super.stop(context);
 	}
 
 	/**
