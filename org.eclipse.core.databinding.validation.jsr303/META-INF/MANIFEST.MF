@@ -1,6 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
+Bundle-Vendor: %providerName
 Bundle-SymbolicName: org.eclipse.core.databinding.validation.jsr303
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
@@ -14,6 +15,5 @@ Import-Package: javax.validation,
  org.osgi.util.tracker
 Bundle-Activator: org.eclipse.core.databinding.validation.jsr303.internal.Activator
 Export-Package: org.eclipse.core.databinding.validation.jsr303
-Bundle-Vendor: %providerName
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.core.runtime
