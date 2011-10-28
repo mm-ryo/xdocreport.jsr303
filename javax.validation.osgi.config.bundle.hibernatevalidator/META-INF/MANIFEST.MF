@@ -5,11 +5,11 @@ Bundle-Vendor: %providerName
 Bundle-SymbolicName: javax.validation.osgi.config.bundle.hibernatevalidator
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: javax.validation.osgi.config.bundle.hibernatevalidator.internal.Activator
-Require-Bundle: org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ClassPath: .
 Import-Package: javax.validation,
  javax.validation.bootstrap,
  javax.validation.spi,
- org.hibernate.validator
+ org.hibernate.validator,
+ org.osgi.framework;version="1.6.0"
