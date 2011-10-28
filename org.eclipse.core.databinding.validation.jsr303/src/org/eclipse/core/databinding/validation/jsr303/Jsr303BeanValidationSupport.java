@@ -24,9 +24,9 @@
  */
 package org.eclipse.core.databinding.validation.jsr303;
 
+import javax.validation.Validation;
+import javax.validation.ValidationException;
 import javax.validation.ValidatorFactory;
-
-import org.eclipse.core.databinding.validation.jsr303.internal.Activator;
 
 /**
  * 
@@ -40,6 +40,10 @@ public class Jsr303BeanValidationSupport {
 	}
 
 	private static StrategyValidatorFactoryResolver strategy = StrategyValidatorFactoryResolver.NotInitialized;
+
+	private static IValidatorFactoryProvider validatorFactoryProvider = null;
+
+	private static boolean osgi;
 
 	/**
 	 * Returns true if there is an implementation of JSR-303 Bean Validator and
@@ -69,7 +73,31 @@ public class Jsr303BeanValidationSupport {
 	 * @return
 	 */
 	public static ValidatorFactory getValidatorFactory() {
-		return Activator.getValidatorFactory();
+		if (validatorFactoryProvider != null) {
+			return validatorFactoryProvider.getValidatorFactory();
+		}
+		return getDefaultValidatorFactory();
+	}
+
+	public static ValidatorFactory getDefaultValidatorFactory() {
+		boolean osgiContext = isOSGi();
+		try {
+			ValidatorFactory factory = Validation
+					.buildDefaultValidatorFactory();
+			Jsr303BeanValidationSupport
+					.setStrategy(osgiContext ? StrategyValidatorFactoryResolver.Fragment
+							: StrategyValidatorFactoryResolver.NoOSgi);
+			return factory;
+		} catch (ValidationException e) {
+			Jsr303BeanValidationSupport
+					.setStrategy(StrategyValidatorFactoryResolver.Unavailable);
+			throw e;
+		}
+	}
+
+	public static void setValidatorFactoryProvider(
+			IValidatorFactoryProvider validatorFactoryProvider) {
+		Jsr303BeanValidationSupport.validatorFactoryProvider = validatorFactoryProvider;
 	}
 
 	/**
@@ -92,7 +120,11 @@ public class Jsr303BeanValidationSupport {
 	 * @return
 	 */
 	public static boolean isOSGi() {
-		return Activator.getDefault() != null;
+		return osgi;
+	}
+
+	public static void setOsgi(boolean osgi) {
+		Jsr303BeanValidationSupport.osgi = osgi;
 	}
 
 	public static StrategyValidatorFactoryResolver getStrategy() {
