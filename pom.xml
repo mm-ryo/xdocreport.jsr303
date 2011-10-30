@@ -14,6 +14,7 @@
 <module>javax.validation.osgi.config.fragment.hibernatevalidator</module>
 <module>org.eclipse.core.databinding.validation.jsr303</module>
 <module>org.eclipse.core.databinding.validation.jsr303.samples</module>
+<module>org.eclipse.core.databinding.validation.jsr303.samples.rcp</module>
 </modules>
 	
 	<build>
